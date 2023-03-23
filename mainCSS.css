@@ -1,0 +1,99 @@
+body{
+    margin: 0;
+}
+
+
+/* https://medium.com/code-writers/minmax-repeat-auto-fill-and-auto-fit-in-grid-layout-18e2912da399 */
+/* https://defensivecss.dev/tip/auto-fit-fill/ */
+/* https://ishadeed.com/article/css-grid-minmax/ */
+/* https://www.w3schools.com/w3css/w3css_slideshow.asp */
+
+#top_bar{
+    background-color: #9b72cf;
+    padding: 1em;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, auto));
+    text-align: center;
+    align-items: center;
+    position: sticky;
+    top: 0px;
+}
+
+.item{
+    padding: 1em;
+    font-size: 35px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    text-decoration: none;
+    transition: color 0.5s
+}
+
+a.home:hover{
+    color: rgb(255, 181, 219);
+}
+a.about:hover{
+    color: rgb(255, 181, 219);
+}
+a.contact:hover{
+    color: rgb(255, 181, 219);
+}
+a.setings:hover{
+    color: rgb(255, 181, 219);
+}
+
+.my_work{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 40px;
+    padding: 40px;
+    justify-items: center;
+    align-items: center;
+}
+
+.container_box{
+    background-color: pink;
+    height: 260px;
+    width: 300px;
+    border-radius: 10px;
+    display: grid;
+    grid-template-rows: 170px 90px;
+    border: 3px solid rgb(255, 231, 239);
+}
+
+.work_box{
+    height: 90px;
+    background-color: white;
+    grid-row: 2;
+    border-radius: 0px 0px 10px 10px;
+}
+
+.project_name{
+    margin: 0;
+    padding-left: 5px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.discription{
+    margin: 0;
+    padding-left: 5px;
+    padding-top: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: gray;
+}
+
+
+.dum_stuff {
+    font-size: 40px;
+}
+
+
+#bottom_bar{
+    margin: 0;
+    height: 200px;
+    width: 100vw;
+    background-color: gray;
+}
+
+.bottom_item{
+    list-style-type: none;
+}
