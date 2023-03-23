@@ -2,7 +2,6 @@ body{
     margin: 0;
 }
 
-
 /* https://medium.com/code-writers/minmax-repeat-auto-fill-and-auto-fit-in-grid-layout-18e2912da399 */
 /* https://defensivecss.dev/tip/auto-fit-fill/ */
 /* https://ishadeed.com/article/css-grid-minmax/ */
@@ -29,17 +28,13 @@ body{
     transition: color 0.5s
 }
 
-a.home:hover{
+.about:hover, .contact:hover, .setings:hover, .home:hover{
     color: rgb(255, 181, 219);
 }
-a.about:hover{
-    color: rgb(255, 181, 219);
-}
-a.contact:hover{
-    color: rgb(255, 181, 219);
-}
-a.setings:hover{
-    color: rgb(255, 181, 219);
+
+.my_work_container{
+    display: grid;
+    background-color: gainsboro;
 }
 
 .my_work{
@@ -49,6 +44,13 @@ a.setings:hover{
     padding: 40px;
     justify-items: center;
     align-items: center;
+}
+
+#my_work_text{
+    font-size: 100px;
+    margin: 0;
+    padding-left: 30px;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .container_box{
@@ -73,6 +75,7 @@ a.setings:hover{
     padding-left: 5px;
     font-family: Arial, Helvetica, sans-serif;
 }
+
 .discription{
     margin: 0;
     padding-left: 5px;
@@ -81,6 +84,15 @@ a.setings:hover{
     color: gray;
 }
 
+.work_box_a{
+    text-decoration: none;
+    color: black;
+    transition: color 0.5s
+}
+
+.work_box_a:hover{
+    color: rgb(234, 128, 183);
+}
 
 .dum_stuff {
     font-size: 40px;
