@@ -7,17 +7,22 @@ body{
 /* https://ishadeed.com/article/css-grid-minmax/ */
 /* https://www.w3schools.com/w3css/w3css_slideshow.asp */
 
+
+
 #top_bar{
-    background-color: #9b72cf;
+    background-color: #2c2838;
     padding: 1em;
     margin: 0 auto;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, auto));
     text-align: center;
     align-items: center;
+    justify-content: center;
     position: sticky;
     top: 0px;
 }
+
+   @import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
 
 .item{
     padding: 1em;
@@ -27,14 +32,43 @@ body{
     text-decoration: none;
     transition: color 0.5s
 }
+   
 
 .about:hover, .contact:hover, .setings:hover, .home:hover{
     color: rgb(255, 181, 219);
 }
 
+
+
+.background{
+    width: auto;
+    background-color: rgb(0, 0, 0);
+    display: grid;
+    grid-template-rows: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.frame{
+    width: 100%;
+    grid-row: 1 / span 3;
+}
+
+.background, .frame{
+    height: auto;
+}
+
+.gradiant{
+    height: 100px;
+    width: 100%;
+    background-image: linear-gradient(to bottom, transparent 0%,  #2c2838 100%);
+}
+
+
+
+
+
 .my_work_container{
     display: grid;
-    background-color: gainsboro;
+    background-color: rgb(59, 48, 79);
 }
 
 .my_work{
@@ -48,24 +82,27 @@ body{
 
 #my_work_text{
     font-size: 100px;
+    color: white;
     margin: 0;
     padding-left: 30px;
     font-family: Arial, Helvetica, sans-serif;
 }
 
 .container_box{
-    background-color: pink;
+    background-color: rgb(215, 175, 255);
     height: 260px;
     width: 300px;
     border-radius: 10px;
     display: grid;
     grid-template-rows: 170px 90px;
-    border: 3px solid rgb(255, 231, 239);
+    border: 3px solid rgb(140, 67, 153);
 }
+
+
 
 .work_box{
     height: 90px;
-    background-color: white;
+    background-color: rgb(69, 60, 82);
     grid-row: 2;
     border-radius: 0px 0px 10px 10px;
 }
@@ -81,12 +118,12 @@ body{
     padding-left: 5px;
     padding-top: 10px;
     font-family: Arial, Helvetica, sans-serif;
-    color: gray;
+    color: rgb(184, 184, 184);
 }
 
 .work_box_a{
     text-decoration: none;
-    color: black;
+    color: white;
     transition: color 0.5s
 }
 
@@ -94,18 +131,50 @@ body{
     color: rgb(234, 128, 183);
 }
 
-.dum_stuff {
-    font-size: 40px;
+.gap{
+    display: grid;
+    width: auto;
+    height: 500px;
+    background-color: black;
 }
+
 
 
 #bottom_bar{
     margin: 0;
-    height: 200px;
-    width: 100vw;
-    background-color: gray;
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(20px, auto));
+    background-color: #2c2838;
+    align-items: center;
 }
 
-.bottom_item{
-    list-style-type: none;
+.bottom_bar_links{
+    grid-row: 2;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20px, auto));
+    justify-content: center;
+    gap: 6px;
+    filter: invert(100%);
+}
+
+.bottom_bar_Copyright{
+    font-weight: 500;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    align-items: center;
+    text-align: center;
+    margin: 0;
+    grid-row: 1;
+}
+
+.bottom_bar_GoBackUp{
+    font-weight: 700;
+    font-size: 20px;
+    color: white;
+    text-decoration: underline;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    margin: 0;
+    grid-row: 3;
 }
