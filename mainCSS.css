@@ -1,18 +1,23 @@
 body{
     margin: 0;
+    background-color: gray;
+}
+
+html{
+    scroll-behavior: smooth;
 }
 
 /* https://medium.com/code-writers/minmax-repeat-auto-fill-and-auto-fit-in-grid-layout-18e2912da399 */
 /* https://defensivecss.dev/tip/auto-fit-fill/ */
 /* https://ishadeed.com/article/css-grid-minmax/ */
 /* https://www.w3schools.com/w3css/w3css_slideshow.asp */
+/*https://stackoverflow.com/questions/35692723/how-to-put-a-partially-transparent-image-above-another-image-in-html*/
 
 
 
 #top_bar{
     background-color: #2c2838;
     padding: 1em;
-    margin: 0 auto;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, auto));
     text-align: center;
@@ -40,25 +45,34 @@ body{
 
 
 
+
 .background{
     width: auto;
     background-color: rgb(0, 0, 0);
     display: grid;
     grid-template-rows: repeat(auto-fit, minmax(300px, 1fr));
+    position: relative;
 }
 
-.frame{
+.frame_1{
     width: 100%;
-    grid-row: 1 / span 3;
+    grid-row: 1;
+    z-index: 1;
 }
 
-.background, .frame{
+.frame_2{
+    width: 100%;
+    position: absolute;
+    grid-row: 1;
+}
+
+.background, .frame_1{
     height: auto;
 }
 
 .gradiant{
     height: 100px;
-    width: 100%;
+    width: auto;
     background-image: linear-gradient(to bottom, transparent 0%,  #2c2838 100%);
 }
 
