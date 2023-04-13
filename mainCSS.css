@@ -13,7 +13,10 @@ html{
 /* https://www.w3schools.com/w3css/w3css_slideshow.asp */
 /*https://stackoverflow.com/questions/35692723/how-to-put-a-partially-transparent-image-above-another-image-in-html*/
 
-
+header{
+    position: sticky;
+    top: 0px;
+}
 
 .top_bar{
     background-color: #2c2838;
@@ -51,7 +54,7 @@ html{
     display: none;
     position: absolute;
     right: 0;
-    opacity: 0.5;
+    opacity: 0;
     width: 42px;
     height: 42px;
     z-index: 12;
