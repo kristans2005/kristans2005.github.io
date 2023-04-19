@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Objektu atpazīšana</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.0.0/p5.min.js"></script>
+    <script src="https://unpkg.com/ml5@latest/dist/ml5.min.js"></script>
+    <link rel="stylesheet" href="ai.css" />
+    <script src="ai.js"></script>
+  </head>
+  <body>
+    <h1>Objektu atpazīšana attēlā</h1>
+    <h2>
+      Ar mākslīgā intelekta bibliotēkām <em>MobileNet</em> un <em>ml5.js</em>
+    </h2>
+    <form onsubmit="handleSubmit(event)">
+      <label for="img-src">Saite uz attēlu:</label>
+      <input id="img-src" />
+      <button class="UwU">atpazit</button>
+    </form>
+    <div id="result">Ievadi saiti...</div>
+    <div id="image"></div>
+  </body>
+</html>
