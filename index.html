@@ -10,11 +10,14 @@
 </head>
 <body>
 
-    <div class="background">
+    <section class="background">
+        <div class="about_me" id="0_0">
+            <p>Sveiki! Mani sauc kristians mikelsons un macos VTDT par programetaju.</p>
+        </div>
         <img src="layer_star_1.gif" alt="moon" class="frame_1">
         <img src="layer_stars_2.png" alt="moon" class="frame_2">
         <div class="gradiant"></div>
-    </div>
+    </section>
     
 <header>
     <input type="checkbox" id="check">
@@ -25,10 +28,10 @@
             <a href="/" class="item home">HOME</a>
         </div>
         <div class="container">
-            <a href="/" class="item about">ABOUT</a>
+            <a href="#0_0" class="item about">ABOUT</a>
         </div>
         <div class="container">
-            <a href="/" class="item contact">PROJECTS</a>
+            <a href="#my_work_text" class="item contact">PROJECTS</a>
         </div>
         <div class="container">
             <a href="/" class="item setings">SETINGS</a>  
@@ -41,20 +44,23 @@
 
 
 
-<div class="my_work_container">
+<main class="my_work_container">
     <h2 id="my_work_text">My work</h2>
 
-    <div class="my_work">
-        <div class="container_box">
+    <article class="my_work">
+        <div class="container_box" id="project_1">
+            <img src="toDo_img.jpg" alt="to-do" width="300px" id="box_1">
             <div class="work_box box1">
-                <h1 class="project_name"><a href="/" class="work_box_a">project name</a></h1>
-                <p class="discription">discription </p>
+
+                <h1 class="project_name"><a href="ToDo_list.html" class="work_box_a">ToDo_List</a></h1>
+                <p class="discription">Enter your daily to do list. Later you can remove them when your done.</p>
             </div>        
         </div>
-        <div class="container_box">
+        <div class="container_box" id="project_1">
+            <img src="c++ joke.png" alt="joke" width="300px" id="box_2">
             <div class="work_box box2">
-                <h1 class="project_name"><a href="/" class="work_box_a">project name</a></h1>
-                <p class="discription">discription</p>
+                <h1 class="project_name"><a href="c++.html" target="_blank" class="work_box_a">2D_Dimensiju_array</a></h1>
+                <p class="discription">C++ 2D_Dimensiju_array viss mans kods ko esmu uzrakstījis</p>
             </div>        
         </div>
         <div class="container_box">
@@ -69,18 +75,21 @@
                 <p class="discription">discription</p>
             </div>        
         </div>
-    </div>
-</div>
+    </article>
+</main>
 
-<div class="gap"></div>
+<div class="gap">
+    <img src="layer_stars_2.png" alt="" height="500px" width="100%">
+</div>
 
 
 <footer id="bottom_bar">
     <p class="bottom_bar_Copyright">© kristians mikelsons</p>
     <div class="bottom_bar_links">
-        <a href="/"><img src="discord.png" alt="discord" class="bottom" width="40px"></a>
-        <a href="/"><img src="instagram.png" alt="instagram" class="bottom" width="40px"></a>
-        <a href="/"><img src="twitter.png" alt="twitter" class="bottom" width="40px"></a>
+        <a href="discord.html"><img src="discord.png" alt="discord" class="bottom" id="discord" width="40px" ></a>
+        <a href="https://www.instagram.com/kristians_2002/" target="_blank"><img src="instagram.png" alt="instagram" class="bottom" id="instagram" width="40px"></a>
+        <a href="https://twitter.com/Prov20002" target="_blank"><img src="twitter.png" alt="twitter" class="bottom" id="twitter" width="40px"></a>
+        <a href="gmail.html"><img src="email.png" alt="twitter" class="bottom" id="twitter" width="40px"></a>
     </div>
     <a class="bottom_bar_GoBackUp" href="#">go back up</a>
 </footer>

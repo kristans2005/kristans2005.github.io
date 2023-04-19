@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lapa</title>
+    <style>
+        .poga{
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>to do list</h1>
+    <form onsubmit="handlesubmit(event)">
+        <label>ievadi uzdevumu: </label>
+        <input id="uzdevums" type="text" />
+        <button>spied</button>
+    </form>
+    <ul id="saraksts"></ul>
+
+<!-- <ul id="resultats"></ul> -->
+
+    <script>
+        const uzdevumi = [];
+        function handlesubmit(event){
+            event.preventDefault();
+            const uzdevums = document.getElementById("uzdevums").value;
+            uzdevumi.push(uzdevums);
+            console.log(uzdevumi);
+            displayItem();
+
+            
+            // let result = document.getElementById("resultats");
+            // let newListItem = document.createElement("li");
+            // newListItem.textContent = task;
+            // result.appendChild(newListItem);
+            
+        }
+        function displayItem() {
+            const list = document.getElementById("saraksts");
+            list.innerHTML = "";
+            uzdevumi.forEach((viensUzdevums, id) => {
+            const newListItem = document.createElement("li");
+            newListItem.textContent = viensUzdevums;
+            const list = document.getElementById("saraksts");
+            list.appendChild(newListItem);
+
+            const poga = document.createElement("button");
+            poga.onclick = () => deleteItem(id);
+            poga.classList.add("poga");
+            poga.style.background = "none";
+            poga.style.border = "none";
+            poga.textContent = "❌";
+            newListItem.appendChild(poga);
+
+        });
+        }
+        function  deleteItem(id){
+           console.log("poga ir nospiesta");
+           uzdevumi.splice(id, 1);
+           displayItem();
+        }
+        
+
+    </script>
+</body>
+</html>

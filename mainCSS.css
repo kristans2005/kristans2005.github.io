@@ -13,9 +13,13 @@ html{
 /* https://www.w3schools.com/w3css/w3css_slideshow.asp */
 /*https://stackoverflow.com/questions/35692723/how-to-put-a-partially-transparent-image-above-another-image-in-html*/
 
+/*----------------------------------------------*/
+/* NAV BAR */
+
 header{
     position: sticky;
     top: 0px;
+    z-index: 5;
 }
 
 .top_bar{
@@ -29,8 +33,6 @@ header{
     position: sticky;
     top: 0px;
 }
-
-   @import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
 
 .item{
     padding: 1em;
@@ -46,6 +48,7 @@ header{
     position: absolute;
     filter: invert(100%);
     right: 0;
+    top: 15px;
     margin-right: 30px;
     z-index: 11;
 }
@@ -53,7 +56,6 @@ header{
 #check{
     display: none;
     position: absolute;
-    right: 0;
     opacity: 0;
     width: 42px;
     height: 42px;
@@ -64,24 +66,210 @@ input:hover{
     cursor: pointer;
 }
 
-
 #close{
     display: none;
 }
 
-
-/* .side_menu{
-display: block;
-} */
-
-
-
-.about:hover, .contact:hover, .setings:hover, .home:hover{
-    color: rgb(255, 181, 219);
+.about:hover, .contact:hover, .home:hover{
+    color: rgb(189, 223, 255);
 }
 
-@media screen and (max-width: 600px){
+.setings:hover{
+    text-decoration: line-through;
+    text-decoration-thickness: 3px;
+    color: rgb(205, 91, 91);
+}
 
+/*----------------------------------------------*/
+/* SPACE BACKGROUND */
+
+.background{
+    width: auto;
+    background-color: rgb(0, 0, 0);
+    display: grid;
+    grid-template-rows: repeat(auto-fit, minmax(300px, 1fr));
+    position: relative;
+}
+
+.about_me{
+    margin-left: 70px;
+    padding-top: 14%;
+    display: grid;
+    width: 50%;
+    position: absolute;
+    color: white;
+    opacity: 0.7;
+    font-size: 40px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+}
+
+.frame_1{
+    width: 100%;
+    grid-row: 1;
+    z-index: 1;
+}
+
+.frame_2{
+    width: 100%;
+    position: absolute;
+    grid-row: 1;
+}
+
+.background, .frame_1{
+    height: auto;
+}
+
+.gradiant{
+    height: 100px;
+    width: auto;
+    background-image: linear-gradient(to bottom, transparent 0%,  #2c2838 100%);
+}
+
+/*----------------------------------------------*/
+/* MY WORK */
+
+.my_work_container{
+    display: grid;
+    background-color: rgb(59, 48, 79);
+}
+
+.my_work{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 40px;
+    padding: 40px;
+    justify-items: center;
+    align-items: center;
+}
+
+#my_work_text{
+    font-size: 100px;
+    color: white;
+    margin: 0;
+    padding-left: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container_box{
+    background-color: rgb(215, 175, 255);
+    height: 260px;
+    width: 300px;
+    border-radius: 10px;
+    display: grid;
+    grid-template-rows: 170px 90px;
+    border: 3px solid rgb(140, 67, 153);
+}
+
+#project_1{
+    background-color: black;
+}
+
+#box_1{
+    border-radius: 10px;
+    height: 170px;
+    filter: invert(100%);
+    overflow: hidden;
+}
+
+#box_2{
+    border-radius: 10px;
+    height: 170px;
+    overflow: hidden;
+}
+
+.work_box{
+    height: 90px;
+    background-color: rgb(69, 60, 82);
+    grid-row: 2;
+    border-radius: 0px 0px 10px 10px;
+}
+
+.project_name{
+    margin: 0;
+    padding-left: 5px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.discription{
+    margin: 0;
+    padding-left: 5px;
+    padding-top: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(184, 184, 184);
+}
+
+.work_box_a{
+    text-decoration: none;
+    color: white;
+    transition: color 0.5s;
+}
+
+.work_box_a:hover{
+    color: rgb(189, 223, 255);
+}
+
+.gap{
+    display: grid;
+    width: auto;
+    height: 500px;
+    background-color: black;
+}
+
+/*----------------------------------------------*/
+/* BOTTOM BAR */
+
+#bottom_bar{
+    margin: 0;
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(20px, auto));
+    background-color: #2c2838;
+    align-items: center;
+}
+
+.bottom_bar_links{
+    grid-row: 2;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20px, auto));
+    justify-content: center;
+    gap: 6px;
+    filter: invert(100%);
+}
+
+#discord, #instagram, #twitter{
+    transition: filter 0.5s;
+}
+
+#discord:hover, #instagram:hover, #twitter:hover{
+    filter: invert(40%);
+}
+
+.bottom_bar_Copyright{
+    font-weight: 500;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    align-items: center;
+    text-align: center;
+    margin: 0;
+    grid-row: 1;
+}
+
+.bottom_bar_GoBackUp{
+    font-weight: 700;
+    font-size: 20px;
+    color: white;
+    text-decoration: underline;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    margin: 0;
+    grid-row: 3;
+}
+
+/*----------------------------------------------*/
+/* MEDIA */
+
+@media screen and (max-width: 600px){
     #logo{
         display: none;
     }
@@ -118,153 +306,13 @@ display: block;
         visibility: visible;
         opacity: 1;
     }
+    .about_me{
+        font-size: 20px;
+        font-weight: 500;
+    }
+    #my_work_text{
+        font-size: 60px;
+        padding-top: 15px;
+    }
 
-}
-
-
-.background{
-    width: auto;
-    background-color: rgb(0, 0, 0);
-    display: grid;
-    grid-template-rows: repeat(auto-fit, minmax(300px, 1fr));
-    position: relative;
-}
-
-.frame_1{
-    width: 100%;
-    grid-row: 1;
-    z-index: 1;
-}
-
-.frame_2{
-    width: 100%;
-    position: absolute;
-    grid-row: 1;
-}
-
-.background, .frame_1{
-    height: auto;
-}
-
-.gradiant{
-    height: 100px;
-    width: auto;
-    background-image: linear-gradient(to bottom, transparent 0%,  #2c2838 100%);
-}
-
-
-
-
-
-.my_work_container{
-    display: grid;
-    background-color: rgb(59, 48, 79);
-}
-
-.my_work{
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    grid-gap: 40px;
-    padding: 40px;
-    justify-items: center;
-    align-items: center;
-}
-
-#my_work_text{
-    font-size: 100px;
-    color: white;
-    margin: 0;
-    padding-left: 30px;
-    font-family: Arial, Helvetica, sans-serif;
-}
-
-.container_box{
-    background-color: rgb(215, 175, 255);
-    height: 260px;
-    width: 300px;
-    border-radius: 10px;
-    display: grid;
-    grid-template-rows: 170px 90px;
-    border: 3px solid rgb(140, 67, 153);
-}
-
-
-
-.work_box{
-    height: 90px;
-    background-color: rgb(69, 60, 82);
-    grid-row: 2;
-    border-radius: 0px 0px 10px 10px;
-}
-
-.project_name{
-    margin: 0;
-    padding-left: 5px;
-    font-family: Arial, Helvetica, sans-serif;
-}
-
-.discription{
-    margin: 0;
-    padding-left: 5px;
-    padding-top: 10px;
-    font-family: Arial, Helvetica, sans-serif;
-    color: rgb(184, 184, 184);
-}
-
-.work_box_a{
-    text-decoration: none;
-    color: white;
-    transition: color 0.5s
-}
-
-.work_box_a:hover{
-    color: rgb(234, 128, 183);
-}
-
-.gap{
-    display: grid;
-    width: auto;
-    height: 500px;
-    background-color: black;
-}
-
-
-
-#bottom_bar{
-    margin: 0;
-    display: grid;
-    grid-template-rows: repeat(3, 1fr);
-    grid-template-columns: repeat(auto-fit, minmax(20px, auto));
-    background-color: #2c2838;
-    align-items: center;
-}
-
-.bottom_bar_links{
-    grid-row: 2;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(20px, auto));
-    justify-content: center;
-    gap: 6px;
-    filter: invert(100%);
-}
-
-.bottom_bar_Copyright{
-    font-weight: 500;
-    color: white;
-    font-family: Arial, Helvetica, sans-serif;
-    align-items: center;
-    text-align: center;
-    margin: 0;
-    grid-row: 1;
-}
-
-.bottom_bar_GoBackUp{
-    font-weight: 700;
-    font-size: 20px;
-    color: white;
-    text-decoration: underline;
-    font-family: Arial, Helvetica, sans-serif;
-    text-align: center;
-    margin: 0;
-    grid-row: 3;
 }

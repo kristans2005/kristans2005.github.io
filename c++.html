@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2D_Dimensiju_array</title>
+</head>
+<body>
+    <p>#include <iostream><br>
+using namespace std;<br>
+<br>
+<br>
+2 dimensiju array<br>
+<br>
+<br>
+<br>
+int main()<br>
+{<br>
+    <br>
+	int mas[3][3] = {<br>
+		{ 1, 2, 3 },<br>
+		{ 4, 5, 6 },<br>
+		{ 7, 8, 9}<br>
+	};<br>
+    <br>
+	for (int i = 0; i < 3; i++) {<br>
+		for (int j = 0; j < 3; j++) {<br>
+			cout << mas[i][j];<br>
+		}<br>
+		cout << endl;<br>
+	}<br>
+    <br>
+}<br>
+<br>
+<br>
+-----------------------------------------------------<br>
+<br>
+<br>
+	int mas[4][6] = {<br>
+		{1,2,3,4,5,6},<br>
+		{7,8,9,1,2,3},<br>
+		{4,5,6,7,8,9},<br>
+		{1,2,3,4,5,6}<br>
+	};<br>
+    <br>
+	int sk = 0, num;<br>
+	int mas2 = 0;<br>
+	cin >> num;<br>
+    <br>
+	for (int i = 0; i < 4; i++) {<br>
+		for (int j = 0; j < 6; j++) {<br>
+			cout << mas[i][j];<br>
+			if (mas[i][j] == 9) {<br>
+				sk = sk + 1;<br>
+			}<br>
+			if (mas[i][j] == num) {<br>
+				cout << "[" << i << "][" << j << "]";<br>
+			}<br>
+		}<br>
+		cout << endl;<br>
+	}<br>
+	cout << "skaitlis 9 tika izvaits " << sk << " reizes" << endl;<br>
+	cout << mas2;<br>
+    <br>
+-------------------------------------------------<br>
+<br>
+<br>
+	string prece[5] = { "maizu", "abolu", "pienu", "desu", "sieru" };<br>
+	int daudzums[5] = {};<br>
+	double cena[5] = { 0.7, 0.6, 1.9, 1.2, 4.6 };<br>
+	double kopa = 0;<br>
+    <br>
+	cout << "precu cenas ir: " << endl;<br>
+	for (int i = 0; i < 5; i++) {<br>
+		cout << prece[i] << " maksa " << cena[i] << endl;<br>
+	}<br>
+	cout << endl;<br>
+	for (int i = 0; i < 5; i++) {<br>
+		cout << "cik " << prece[i] <<  " nemsi: ";<br>
+		cin >> daudzums[i];<br>
+	}<br>
+	cout << endl;<br>
+	for (int i = 0; i < 5; i++) {<br>
+		cena[i] = cena[i] * daudzums[i];<br>
+		cout << prece[i] << "............" << cena[i] << endl;<br>
+	}<br>
+	for (int i = 0; i < 5; i++) {<br>
+		kopa = kopa + cena[i];<br>
+	}<br>
+	cout << "kopsumma: " << kopa;<br>
+    <br>
+    <br>
+-----------------------------------------------------<br>
+<br>
+	int mas[5][5] = {<br>
+		{1,1,1,1,1},<br>
+		{2,2,2,2,2},<br>
+		{3,3,3,3,3},<br>
+		{4,4,4,4,4},<br>
+		{5,5,5,5,5}<br>
+	};<br>
+    <br>
+	for (int i = 0; i < 5; i++) {<br>
+		for (int j = 0; j < 5; j++) {<br>
+			if (i == j or i < j) {<br>
+				mas[i][j] = 0;<br>
+			}<br>
+			cout << mas[i][j];<br>
+		}<br>
+		cout << endl;<br>
+	}<br>
+    <br>
+    <br>
+----------------------------------------------------<br>
+<br>
+saskaitit rindas<br>
+<br>
+	for (int i = 0; i < 5; i++) {<br>
+		for (int j = 0; j < 5; j++) {<br>
+			if (i == i) {<br>
+				kopa = mas[i][j] + kopa;<br>
+			}<br>
+            <br>
+		}<br>
+		cout << kopa;<br>
+		kopa = 0;<br>
+		cout << endl;<br>
+	}<br>
+    <br>
+}<br>
+<br>
+-----------------------------------------------<br>
+<br>
+int main()<br>
+{<br>
+	string stundas[4] = { "matematika: ", "programmesana: ", "sports: ", "latviesu valoda: " };<br>
+	int atzimes[4][4] = {<br>
+		{4,5,6,7},<br>
+		{5,6,4,2},<br>
+		{6,4,3,7},<br>
+		{7,9,6,4}<br>
+	};<br>
+	double videja = 0;<br>
+    <br>
+		for (int j = 0; j < 4; j++) {<br>
+			cout << stundas[j];<br>
+			for (int k = 0; k < 4; k++) {<br>
+				if (atzimes[j][k] == 4) {<br>
+					cout << "9 ";<br>
+					videja += 9;<br>
+				}<br>
+				else {<br>
+					cout << atzimes[j][k] << " ";<br>
+					videja += atzimes[j][k];<br>
+				}<br>
+			}<br>
+			videja /= 4;<br>
+			cout << "|" << videja << "|";<br>
+			videja = 0;<br>
+			cout << endl;<br>
+		}<br>
+        <br>
+}<br>
+<br>
+-------------------------------------------<br>
+<br>
+int main()<br>
+{<br>
+	int mas[6][3] = {};<br>
+	srand(time(NULL));<br>
+    <br>
+	for (int i = 0; i < 6; i++) {<br>
+		for (int j = 0; j < 3; j++) {<br>
+			mas[i][j] = rand() % 100;<br>
+			if (i == j) {<br>
+				cout << mas[i][j] << " atrodas: " << "[" << i << "] " << "[" << j << "]" << endl;<br>
+			}<br>
+		}<br>
+		cout << endl;<br>
+	}<br>
+}<br>
+<br>
+--------------------------------------<br>
+<br>
+int main()<br>
+{<br>
+	int mas[6][3] = {};<br>
+	srand(time(NULL));<br>
+    <br>
+	for (int i = 0; i < 6; i++) {<br>
+		for (int j = 0; j < 3; j++) {<br>
+			mas[i][j] = rand() % 100;<br>
+			if (i % 2 && mas[i][j] < 48 && mas[i][j] % 3) {<br>
+				cout << mas[i][j] << " atrodas: " << "[" << i << "] " << "[" << j << "]" << endl;<br>
+			}<br>
+		}<br>
+		cout << endl;<br>
+	}<br>
+}<br>
+<br>
+--------------------------------------<br>
+<br>
+samaina rindas un kolonas ar vietam<br>
+<br>
+int main() {<br>
+	srand(time(NULL));<br>
+	int mas[5][5];<br>
+	for (int i = 0; i < 5; i++) {<br>
+		for (int j = 0; j < 5; j++)<br>
+		{<br>
+			mas[i][j] = rand() % 10;<br>
+			cout << mas[i][j] << " ";<br>
+		}<br>
+		cout << endl;<br>
+	}<br>
+	cout << endl << endl;<br>
+    <br>
+	for (int i = 0; i < 5; i++) {<br>
+        <br>
+		for (int j = 0; j < 5; j++) {<br>
+			cout << mas[j][i] <<" ";<br>
+		}<br>
+		cout << endl;<br>
+	}<br>
+}<br>
+<br>
+------------------------------------<br>
+<br>
+int main() {<br>
+    srand(time(NULL));<br>
+    int divdimensijumasivs[10][10];<br>
+    int rinda, kolona, a, b;<br>
+    <br>
+    for (int i = 0; i < 10; i++) {<br>
+        for (int j = 0; j < 10; j++) {<br>
+            divdimensijumasivs[i][j] = 0;<br>
+            cout << divdimensijumasivs[i][j] << " ";<br>
+        }<br>
+        cout << endl;<br>
+    }<br>
+    cout << endl;<br>
+    <br>
+    Again:<br>
+    <br>
+    cout << "Noradiet masiva rindu skaitu 1 -10: ";<br>
+    cin >> rinda;<br>
+    cout << "Noradiet masiva kolonu skaitu 1 - 10: ";<br>
+    cin >> kolona;<br>
+    cout << endl;<br>
+    <br>
+    kolona -= 1;<br>
+    rinda -= 1;<br>
+    <br>
+    for (int i = 0; i < 10; i++) {<br>
+        for (int j = 0; j < 10; j++) {<br>
+            if (i == rinda && j == kolona) {<br>
+                divdimensijumasivs[i][j] = rand() % 10;<br>
+            }<br>
+            cout << divdimensijumasivs[i][j] << " ";<br>
+        }<br>
+        cout << endl;<br>
+    }<br>
+    rinda = 0;<br>
+    kolona = 0;<br>
+    <br>
+    goto Again;<br>
+}<br>
+<br>
+--------------------------------------------<br>
+</p>
+</body>
+</html>
